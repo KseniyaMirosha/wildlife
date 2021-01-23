@@ -5,7 +5,7 @@
 }
 div.first-block {
   background: url("images/fox.png") no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 780px;
   background-color: #02160b;
 }
@@ -34,7 +34,7 @@ div.first-block div.header div.logo p {
 }
 div.first-block div.header nav {
   justify-self: right;
-  margin-right: 140px;
+  margin-right: 120px;
 }
 div.first-block div.header nav ul {
   list-style: none;
@@ -65,11 +65,13 @@ div.first-block div.header nav ul button:active {
 div.first-block div.header nav ul li a {
   font-family: "Open Sans", sans-serif;
   color: #f7f7f7;
-  margin-right: 60px;
   font-size: 23px;
   line-height: 60px;
   font-weight: 400;
   text-decoration: none;
+}
+div.first-block div.header nav ul li:not(:last-of-type) {
+  margin-right: 60px;
 }
 div.first-block div.header nav ul li a:hover {
   color: darkorange;
@@ -121,7 +123,7 @@ div.get-notified {
   background-color: #cccccc;
 }
 div.latest-articles div.head {
-  padding: 150px 30%;
+  padding: 120px 30%;
 }
 div.latest-articles div.head h2 {
   font-family: "Open Sans", sans-serif;
@@ -257,7 +259,7 @@ div.get-notified form input:last-of-type:active {
   background: saddlebrown;
 }
 div.footer {
-  background: url('images/footer.jpg') no-repeat;
+  background: url("images/footer.jpg") no-repeat;
   background-color: #181617;
   background-size: cover;
   display: grid;
@@ -282,8 +284,8 @@ div.footer div.logo p {
 }
 div.footer nav ul {
   list-style: none;
-    display: flex;
-    padding-top: 150px;
+  display: flex;
+  padding-top: 150px;
 }
 div.footer nav ul li a {
   font-family: "Open Sans", sans-serif;
@@ -310,18 +312,214 @@ div.footer div.social ul li {
   cursor: pointer;
 }
 div.footer div.social ul li.facebook {
-  background: url('images/facebook.svg') no-repeat;
+  background: url("images/facebook.svg") no-repeat;
 }
 div.footer div.social ul li.instagram {
-  background: url('images/instagram.svg') no-repeat;
+  background: url("images/instagram.svg") no-repeat;
 }
 div.footer div.social ul li.pinterest {
-  background: url('images/pinterest.svg') no-repeat;
+  background: url("images/pinterest.svg") no-repeat;
 }
 div.footer div.social ul li.telegram {
-  background: url('images/telegram.svg') no-repeat;
+  background: url("images/telegram.svg") no-repeat;
 }
 div.footer div.social ul li:hover {
   box-shadow: 1px 1px 10px greenyellow;
-    border-radius: 50%;
+  border-radius: 50%;
+}
+
+@media only all and (max-width: 1300px) {
+  div.footer {
+    grid-template-columns: 25% 45% 25%;
+    justify-items: center;
+  }
+  div.footer div.logo {
+    margin-left: 20%;
+  }
+  div.footer nav ul li:last-of-type a {
+    margin-right: 0;
+  }
+  div.footer div.social ul {
+    padding-left: 0;
+  }
+  div.footer div.social ul li:first-of-type {
+    margin-left: 0;
+  }
+}
+
+@media only all and (max-width: 1024px) {
+  div.first-block {
+    background-size: cover;
+  }
+  div.first-block div.header div.logo {
+    margin-left: 20%;
+  }
+  div.first-block div.header div.logo p {
+    font-size: 25px;
+    padding-top: 10px;
+  }
+  div.first-block div.header nav {
+    margin-right: 0;
+    justify-self: center;
+  }
+  div.first-block div.header nav ul {
+    margin-top: 28px;
+  }
+  div.first-block div.header nav ul li a,
+  div.first-block div.header nav ul li a button {
+    font-size: 18px;
+  }
+  div.first-block div.survival div.text {
+    margin: 200px 6%;
+  }
+  div.first-block div.survival div.text article {
+    font-size: 1em;
+    margin-top: 20px;
+  }
+  div.first-block div.survival div.text a button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1.3em;
+  }
+  div.latest-articles div.head {
+    padding: 10%;
+  }
+  div.latest-articles div.slider div.image1 div.text,
+  div.latest-articles div.slider div.image2 div.text,
+  div.latest-articles div.slider div.image3 div.text {
+    bottom: 10px;
+    left: 5px;
+    text-align: justify;
+  }
+  div.latest-articles div.slider div.image1 div.text h1,
+  div.latest-articles div.slider div.image2 div.text h1,
+  div.latest-articles div.slider div.image3 div.text h1 {
+    font-size: 1em;
+  }
+
+  div.latest-articles div.slider div.image1 div.text p,
+  div.latest-articles div.slider div.image2 div.text p,
+  div.latest-articles div.slider div.image3 div.text p {
+    font-size: 0.8em;
+  }
+  div.latest-articles div.slider button i {
+    font-size: 3em;
+  }
+  div.get-notified {
+    padding: 15%;
+  }
+  div.footer {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    padding-bottom: 50px;
+  }
+  div.footer div.logo {
+    margin: 50px;
+  }
+  div.footer nav ul {
+    padding-top: 50px;
+  }
+  div.footer div.social {
+    grid-column: 1 / span 2;
+  }
+  div.footer div.social ul {
+    padding-top: 0;
+  }
+}
+
+@media only all and (max-width: 768px) {
+  div.first-block {
+    background-size: contain;
+    height: auto;
+    padding: 1px;
+  }
+  div.first-block div.header {
+    display: block;
+    height: 410px;
+  }
+  div.first-block div.header div.logo {
+    padding: 20px;
+    margin: 0;
+    max-width: 100px;
+  }
+  div.first-block div.header ul {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  div.first-block div.survival div.text {
+    margin: 100px auto;
+    text-align: center;
+  }
+  div.latest-articles div.slider div.arrow-left button {
+    margin-left: -20px;
+  }
+  div.latest-articles div.slider div.arrow-right button {
+    margin-left: -45px;
+  }
+  div.latest-articles div.slider div.text p {
+    line-height: unset;
+  }
+  div.footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  div.footer nav ul {
+    padding-top: 0;
+  }
+}
+@media only all and (max-width: 576px) {
+  div.first-block {
+    background-size: 150%;
+  }
+  div.first-block div.header {
+    height: 300px;
+  }
+  div.first-block div.header nav ul {
+    flex-direction: row;
+    margin: 170px 10px;
+    padding-left: 0;
+  }
+  div.first-block div.header nav ul li:not(:last-of-type) {
+    margin-right: 10px;
+  }
+  div.first-block div.survival div.text {
+    margin: 10px;
+  }
+  div.latest-articles div.slider {
+    display: block;
+  }
+  div.latest-articles div.slider div.arrow-left,
+  div.latest-articles div.slider div.arrow-right {
+    display: none;
+  }
+  div.latest-articles div.slider div.image1,
+  div.latest-articles div.slider div.image2 {
+    margin-bottom: 10px;
+  }
+  div.get-notified form {
+    display: block;
+  }
+  div.get-notified form input:first-of-type {
+    width: auto;
+    max-width: 220px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  div.get-notified form input:last-of-type {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 auto;
+    display: block;
+  }
+  div.footer nav {
+    margin-bottom: 30px;
+  }
+  div.footer nav ul {
+    display: block;
+  }
 }
